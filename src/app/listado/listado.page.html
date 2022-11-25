@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Listado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item *ngFor="let persona of personas">
+        <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label>{{persona.id}}.-{{persona.name}}</ion-label>
+          <ion-label>//{{persona.email}}</ion-label>
+        </ion-item>
+  </ion-card>
+
+
+
+      <!--  <div *ngFor="listado.lenghy > 0">
+
+      <ion-list>
+        <div *ngFor="let aux of listado" [routerLink]="['../listadouser/', aux.id]">
+          <ion-item>
+            <ion-label>{{aux.name}}</ion-label>
+            <ion-label>{{aux.username}}</ion-label>
+          </ion-item>
+        </div>
+      </ion-list>
+    -->
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="grabar(nombre, apellido, correo)" color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+    <ion-button (click)="limpiar(nombre, apellido, correo)" color="light" slot="end">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

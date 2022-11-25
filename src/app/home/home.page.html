@@ -1,0 +1,36 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      <ion-title  size="Small">Login</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header >
+      <ion-card-title>RegistrAPP</ion-card-title>
+      <img position="center" style="width: 280px;" src="assets/img/2.png" alt="">
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formulariologin">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button   color="success" expand="full"(click)="ingresar()">
+          Ingresar
+        </ion-button>
+        <br>
+        <ion-button  expand="full" [routerLink]="['/regristro']" >
+          Registrarse
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

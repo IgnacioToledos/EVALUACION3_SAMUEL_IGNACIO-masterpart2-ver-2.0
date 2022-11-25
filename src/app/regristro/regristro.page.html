@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bienvenido al Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card-header >
+      <ion-card-title>RegistrAPP</ion-card-title>
+      <img position="center" style="width: 280px;" src="assets/img/2.png" alt="">
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content>
+        <form [formGroup]="formularioregistro">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar Contraseña</ion-label>
+          <ion-input formControlName="confirmarpassword" type="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button color="primary" expand="full"(click)="guardar()">
+          Registrarse
+        </ion-button>
+        <br>
+      </form>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
