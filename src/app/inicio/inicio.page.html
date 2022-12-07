@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card class="ion-text-center">
+    <ion-card-content >
+      Bienvenido al sistema
+      <qrcode
+        [qrdata]="qrCodeString" 
+        [width]="256" 
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+      {{code}}
+      <!--ion-tab-button (click)="takepicture()">
+        <ion-icon name="camera"></ion-icon>
+        <ion-label>Abrir</ion-label>
+        <img [src]="picture">
+      </ion-tab-button-->
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/listado']"><ion-icon  color="primary" name="list-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button [routerLink]="['/tercerapagina']"><ion-icon  color="primary" name="calendar-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button [routerLink]="['/home']"><ion-icon color="danger" name="log-out-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  </ion-content>
