@@ -34,6 +34,14 @@ const routes: Routes = [
   {
     path: 'listadouser',
     loadChildren: () => import('./listadouser/listadouser.module').then( m => m.ListadouserPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'sesionprofesor',
+    loadChildren: () => import('./sesionprofesor/sesionprofesor.module').then( m => m.SesionprofesorPageModule)
   }
 ];
 

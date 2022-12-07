@@ -1,15 +1,19 @@
 <ion-header  [translucent]="true">
   <ion-toolbar color="tertiary">
     <ion-title>
-      <ion-title  size="Small">Login</ion-title>
+      <ion-title  size="Small"></ion-title>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background" [fullscreen]="true">
   <ion-card>
+    <br>
+    <br>
     <ion-card-header >
-      <ion-card-title>RegistrAPP</ion-card-title>
+      <div align="center"><ion-card-title><h5>RegistrAPP</h5></ion-card-title></div>
+      <br>
+      <br>
       <img position="center" style="width: 280px;" src="assets/img/2.png" alt="">
     </ion-card-header>
     <ion-card-content>
@@ -23,12 +27,15 @@
           <ion-input formControlName="password" type="password"></ion-input>
         </ion-item>
         <br>
-        <ion-button   color="success" expand="full"(click)="ingresar()">
+        <ion-button color="success" expand="full"(click)="ingresar()">
           Ingresar
         </ion-button>
         <br>
         <ion-button  expand="full" [routerLink]="['/regristro']" >
           Registrarse
+        </ion-button>
+        <ion-button  expand="full" [routerLink]="['/sesionprofesor']" >
+          Ingresar como Profesor
         </ion-button>
       </form>
     </ion-card-content>
